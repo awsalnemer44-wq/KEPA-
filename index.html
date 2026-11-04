@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kopitiam Rasa estimate</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Kopitiam Rasa</h1>
+    <p>Calculate an estimate. (We are not making or saving an order).</p>
+    <form id="order-form" novalidate>
+      <label for="product">Product</label>
+      <select id="product" name="product">
+        <option value="">Choose a product</option>
+        <option value="kopi">Kopi — RM6</option>
+        <option value="teh">Teh — RM4</option>
+        <option value="nasilemak">Nasi Lemak — RM10</option>
+      </select>
+      <label for="quantity">Quantity</label>
+      <input id="quantity" name="quantity" type="text" inputmode="decimal" aria-describedby="quantity-help" autocomplete="off">
+      <p id="quantity-help">Enter a whole number from 1 to 5.</p>
+      <div class="actions">
+        <button type="submit">Calculate</button>
+        <button id="reset-estimate" type="button">Reset</button>
+      </div>
+    </form>
+    <p id="message" role="status">Choose a product and enter a quantity.</p>
+    <h2>Last valid estimate</h2>
+    <p id="summary" aria-live="polite">No estimate yet.</p>
+    <p class="note">This estimate belongs to this open page. Reloading clears it.</p>
+    <noscript>Enable JavaScript to calculate an estimate.</noscript>
+  </main>
+</body>
+</html>
